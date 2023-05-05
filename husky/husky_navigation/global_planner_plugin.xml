@@ -1,0 +1,16 @@
+<!-- we specify the path to the plugin library. In this case, 
+the path is lib/libglobal_planner_lib, where lib is the folder in the directory ~/catkin_ws/devel/ -->
+<library path="lib/libglobal_planner_lib">
+
+<!-- we first specify the name of the global_planner plugin 
+that we will use later in move_base launch file as parameter 
+that specifies the global planner to be used in nav_core. 
+
+The type specifies the name the class that implements the plugin which is in our case 
+global_planner::GlobalPlanner, and the The base_class_type specifies the name 
+the base class that implements the plugin which is in our case nav_core::BaseGlobalPlanner. -->
+    <class name="global_planner/GlobalPlanner" type="global_planner::GlobalPlanner"
+        base_class_type="nav_core::BaseGlobalPlanner">
+        <description>This is a global planner plugin by iroboapp project.</description>
+    </class>
+</library>

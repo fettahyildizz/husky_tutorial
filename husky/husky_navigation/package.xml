@@ -1,0 +1,39 @@
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>husky_navigation</name>
+  <version>0.6.7</version>
+  <description>Autonomous mapping and navigation demos for the Clearpath Husky</description>
+
+  
+  <maintainer email="tbaltovski@clearpathrobotics.com">Tony Baltovski</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/husky_navigation</url>
+  <url type="bugtracker">https://github.com/husky/husky/issues</url>
+  <url type="repository">https://github.com/husky/husky</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+  <exec_depend>amcl</exec_depend>
+  <!-- Disabling till package is released -->
+  <!-- <exec_depend>frontier_exploration</exec_depend> -->
+  <exec_depend>gmapping</exec_depend>
+  <exec_depend>map_server</exec_depend>
+  <exec_depend>move_base</exec_depend>
+  <exec_depend>navfn</exec_depend>
+  <exec_depend>base_local_planner</exec_depend>
+  <exec_depend>dwa_local_planner</exec_depend>
+  <depend>nav_core</depend>
+  <depend>roscpp</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>rospy</depend>
+  <depend>pluginlib</depend>
+
+  <export>
+    <nav_core plugin="${prefix}/lp_plugin.xml"/>
+    <nav_core plugin="${prefix}/global_planner_plugin.xml"/>
+  </export>
+</package>
